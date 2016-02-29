@@ -1,28 +1,12 @@
 'use strict';
 
-import React from 'react'
+import { Component } from 'react'
+import CompactMeal from './compact-meal';
 
-class CompactMeal extends React.Component {
-  render() {
-    return (
-      <div>
-        <div>{this.props.meal.name}</div>
-        <div className="compact-meal-nutrients">
-          <ul>
-            {this.props.meal.nutrients.map(nutrient => {
-              return <li key={nutrient.name}>{nutrient.name} - {nutrient.value}</li>
-            })}
-          </ul>
-        </div>
-      </div>
-    );
-  }
-};
-
-var MealApp = React.createClass({
-
-  getInitialState: function() {
-    return {
+export default class MealApp extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
       compactMeals: [{
         name: 'Edameme Spaghetti with Turkey Meatballs',
         nutrients: [{
@@ -37,9 +21,9 @@ var MealApp = React.createClass({
         {name: 'Salmon with Brccoli', nutrients: []},
       ],
     };
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div>
         <h1>Meals</h1>
@@ -50,7 +34,5 @@ var MealApp = React.createClass({
         </ul>
       </div>
     )
-  },
-});
-
-export default MealApp;
+  }
+}
