@@ -1,0 +1,12 @@
+.compact-meal {
+  margin: 20px 0;
+}
+
+#new-meal-form input {
+  display: block;
+}
+
+.optional {
+  font-size: .8em;
+  font-style: italic;
+}

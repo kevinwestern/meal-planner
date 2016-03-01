@@ -1,6 +1,6 @@
 export default function CompactMeal(props) {
   return (
-    <div>
+    <div className="compact-meal">
       <div>{props.meal.name}</div>
       <div className="compact-meal-nutrients">
         <ul>
