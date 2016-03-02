@@ -2,31 +2,14 @@
 
 import { Component } from 'react'
 import CompactMeal from './compact-meal';
+import FOODS from '../seed-data'
 
 export default class MealApp extends Component {
   constructor(props, context) {
     super(props, context);
+    const foods = localStorage.getItem('foods');
     this.state = {
-      compactMeals: [{
-        name: 'Edameme Spaghetti with Turkey Meatballs',
-        nutrients: [{
-          name: 'Carb',
-          value: 24,
-        },{
-          name: 'Protein',
-          value: 30,
-        }]},
-        {name: 'Chicken Strips and Broccoli', nutrients: []},
-        {name: 'Chicken, Sweet Potato Fries and Veggies', nutrients: []},
-        {name: 'Salmon and Brccoli', nutrients: []},
-        {name: 'Salmon Toast', nutrients: []},
-        {name: 'Spaghetti Squash Carbonara', nutrients: []},
-        {name: 'Protein Shake', nutrients: []},
-        {name: 'Chicken Taco Salad', nutrients: []},
-        {name: 'Chicken Parmesan', nutrients: []},
-        {name: 'Chicken Pita', nutrients: []},
-        {name: 'Chipotle Bowl', nutrients: []}
-      ],
+      compactMeals: foods ? JSON.parse(foods) : FOODS,
       newMealForm: [{
         id: 'name',
         label: 'Name:',
@@ -76,6 +59,12 @@ export default class MealApp extends Component {
     const foods = JSON.parse(localStorage.getItem('foods') || '[]');
     foods.push(this.formToJson_(this.state.newMealForm));
     localStorage.setItem('foods', JSON.stringify(foods));
+    this.setState({
+      compactMeals: foods,
+      newMealForm: this.state.newMealForm.map(field => {
+        return Object.assign({}, field, {value: ''});
+      })
+    });
   }
 
   formToJson_(newMealForm) {
@@ -104,6 +93,7 @@ export default class MealApp extends Component {
             return <li key={meal.name}><CompactMeal meal={meal}></CompactMeal></li>
           })}
         </ul>
+        <div className="fab-button"></div>
         <NewMealForm form={this.state.newMealForm}
                      onChange={this.updateFormState.bind(this)}
                      onSubmit={this.addFood.bind(this)}></NewMealForm>
