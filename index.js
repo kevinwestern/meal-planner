@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
 import MealApp from './src/app'
 import WeekPlan from './src/week-plan'
+import seed_data from './seed-data'
 
 function foodApp(state = initialState, action) {
   // For now, don’t handle any actions
@@ -13,7 +14,7 @@ function foodApp(state = initialState, action) {
 
 let meals = localStorage.getItem('meals');
 if (!meals) {
-  meals = [];
+  meals = seed_data.MEALS;
 } else {
   meals = JSON.parse(meals);
 }
