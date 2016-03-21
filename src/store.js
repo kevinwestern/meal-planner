@@ -96,18 +96,27 @@ const store = {
 
   getEditMealForm: function(mealName) {
     const meal = this.getMeals().find(meal => meal.name == mealName);
-    return {
-      name: meal.name,
-      calories: meal.nutrients.calories,
-      protein: meal.nutrients.protein,
-      carbs: meal.nutrients.carbs,
-      fat: meal.nutrients.fat
-    }
+    return Object.assign({}, meal);
+  },
+
+  saveEditMealForm: function(form) {
+    var updatedMeal = this.getMeals().find(meal => form.name == meal.name);
+    var meals = this.meals.map(meal => {
+      return meal.name == form.name ?
+        Object.assign({}, meal, form) : meal;
+    });
+    this.meals = meals;
+    localStorage.setItem('meals', JSON.stringify(this.meals));
+    this.dispatchChange();
   },
 
   updateEditMealForm: function(form, field, value) {
     var newForm = Object.assign({}, form);
-    newForm[field] = value;
+    if (field == 'name') {
+      newForm[field] = value;
+    } else {
+      newForm.nutrients[field] = value;
+    }
     this.dispatchChange('updateEditMealForm', newForm);
   },
 
@@ -121,7 +130,8 @@ const store = {
   dispatchChange: function(tag, value) {
     this.listeners_.forEach(observer => {
       // gross
-      if (!tag || (observer.tag && observer.tag == tag)) {
+      if ((observer.tag && observer.tag == tag) ||
+          (!tag && !observer.tag)) {
         observer.listener(value)
       }
     });
