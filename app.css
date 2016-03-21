@@ -1,5 +1,26 @@
-.compact-meal {
+.meal {
   margin: 20px 0;
+}
+
+.meal-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-header-calories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-header-cal {
+  font-size: .6em;
 }
 
 #new-meal-form input {

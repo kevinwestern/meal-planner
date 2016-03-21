@@ -1,9 +1,19 @@
-'use strict';
+import {store} from './store';
+import EditMeal from './edit-meal';
+import Meal from './meal';
+import { Component } from 'react';
 
-import { Component } from 'react'
-import CompactMeal from './compact-meal';
+export class MealListContainer extends Component {
+  constructor() {
+    super();
+  }
 
-export default class MealApp extends Component {
+  render() {
+    return <MealList store={store}></MealList>
+  }
+}
+
+export class MealList extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -27,9 +37,9 @@ export default class MealApp extends Component {
     return (
       <div>
         <h1>Meals</h1>
-        <ul>
+        <ul className="meal-list">
           {this.state.meals.map(meal => {
-            return <li key={meal.name}><CompactMeal meal={meal}></CompactMeal></li>
+            return <li key={meal.name}><Meal meal={meal}></Meal></li>
           })}
         </ul>
         <div className="fab-button"></div>
