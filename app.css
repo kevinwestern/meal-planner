@@ -8,19 +8,16 @@
   padding: 0;
 }
 
-.meal-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.meal-header-calories {
+.meal-calories {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 16px;
 }
 
-.meal-header-cal {
+.meal-calories-subtext {
   font-size: .6em;
+  line-height: 1em;
 }
 
 #new-meal-form input {
@@ -36,9 +33,9 @@
   position: fixed;
   right: 16px;
   bottom: 16px;
-  width: 56px;
-  height: 56px;
-  border-radius: 9999999px;
-  background-color: #FFC107;
-  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.field label {
+  width: 60px;
+  display: inline-block;
 }

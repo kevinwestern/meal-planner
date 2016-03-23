@@ -1,7 +1,8 @@
 import {store} from './store';
 import EditMeal from './edit-meal';
-import Meal from './meal';
 import { Component } from 'react';
+import { Link } from 'react-router';
+
 
 export class MealListContainer extends Component {
   constructor() {
@@ -37,12 +38,20 @@ export class MealList extends Component {
     return (
       <div>
         <h1>Meals</h1>
-        <ul className="meal-list">
+        <ul className="meal-list mdl-list">
           {this.state.meals.map(meal => {
-            return <li key={meal.name}><Meal meal={meal}></Meal></li>
+            return <li key={meal.name} className="mdl-list__item">
+              <span className="mdl-list__item-primary-content"><Link to={'meals/edit/' + meal.name}>{meal.name}</Link></span>
+              <div className="mdl-list__item-secondary-action meal-calories">
+                <div>500</div>
+                <div className="meal-calories-subtext">Cal</div>
+              </div>
+            </li>
           })}
         </ul>
-        <div className="fab-button"></div>
+        <button className="fab-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+          <i className="material-icons">add</i>
+        </button>
         <NewMealForm form={this.state.newMealForm}
                      store={this.props.store}></NewMealForm>
       </div>
