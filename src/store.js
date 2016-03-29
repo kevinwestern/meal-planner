@@ -9,78 +9,20 @@ if (!meals) {
 }
 
 // let store = createStore(foodApp, foods);
-let newMealForm = [{
-  id: 'name',
-  label: 'Name:',
-  name: 'name',
-  placeholder: 'Baked Chicken',
-  required: true,
-  type: 'text',
-  value: '',
-}, {
-  id: 'cals',
-  label: 'Calories:',
-  name: 'cals',
-  placeholder: 450,
-  required: false,
-  type: 'number',
-  value: '',
-}, {
-  id: 'protein',
-  label: 'Protein:',
-  name: 'protein',
-  placeholder: 50,
-  required: false,
-  type: 'number',
-  value: '',
-}, {
-  id: 'carbs',
-  label: 'Carbs:',
-  name: 'carbs',
-  placeholder: 40,
-  required: false,
-  type: 'number',
-  value: '',
-}, {
-  id: 'fat',
-  label: 'Fat:',
-  name: 'fat',
-  placeholder: 10,
-  required: false,
-  type: 'number',
-  value: '',
-}];
+let newMealForm = {
+  name: '',
+  nutrients: {
+    calories: '',
+    carbs: '',
+    fat: '',
+    protein: ''
+  }
+};
 
 const store = {
   listeners_: [],
   newMealForm: newMealForm,
   meals: meals,
-
-  updateFormField: function (index, value) {
-    this.newMealForm = this.newMealForm.map((field, i) => {
-      return i == index ?
-        Object.assign({}, field, {value}) :
-        field;
-    })
-    this.dispatchChange();
-  },
-
-  addMeal: function(mealForm) {
-    this.meals.push(this.formToJson_(mealForm));
-    localStorage.setItem('meals', JSON.stringify(this.meals));
-    this.newMealForm = newMealForm;
-    this.dispatchChange();
-  },
-
-  formToJson_: function(form) {
-    return {
-      name: form[0].value,
-      nutrients: form.slice(1).reduce((val, nutrient) => {
-        val[nutrient.name] = nutrient.value;
-        return val;
-      }, {})
-    };
-  },
 
   addChangeListener: function(listener) {
     this.listeners_.push({listener});
@@ -97,6 +39,19 @@ const store = {
   getEditMealForm: function(mealName) {
     const meal = this.getMeals().find(meal => meal.name == mealName);
     return Object.assign({}, meal);
+  },
+
+  getNewMealForm: function() {
+    return Object.assign({}, this.newMealForm);
+  },
+
+  saveCreateMealForm: function(form) {
+    var meals = this.meals.slice();
+    meals.push(form);
+    localStorage.setItem('meals', JSON.stringify(meals));
+    this.newMealForm = newMealForm;
+    this.meals = meals;
+    this.dispatchChange();
   },
 
   saveEditMealForm: function(form) {

@@ -49,51 +49,12 @@ export class MealList extends Component {
             </li>
           })}
         </ul>
-        <button className="fab-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-          <i className="material-icons">add</i>
-        </button>
-        <NewMealForm form={this.state.newMealForm}
-                     store={this.props.store}></NewMealForm>
+        <Link to='/meals/create'>
+          <button className="fab-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i className="material-icons">add</i>
+          </button>
+        </Link>
       </div>
     )
-  }
-}
-
-class NewMealForm extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  addFood(e) {
-    e.preventDefault();
-    this.props.store.addMeal(this.props.form);
-  }
-
-  updateFormState(e) {
-    this.props.store.updateFormField(e.target.dataset.index, e.target.value)
-  }
-
-  render() {
-    return (
-      <div id="new-meal-form">
-        <form onSubmit={this.addFood.bind(this)}>
-          {this.props.form.map((field, index) => {
-            return <div key={index}>
-              <label htmlFor={field.id}>{field.label}</label>
-              <input data-index={index}
-                     id={field.id}
-                     name={field.name}
-                     placeholder={field.placeholder}
-                     required={field.required}
-                     type={field.type}
-                     value={field.value}
-                     onChange={this.updateFormState.bind(this)}/>
-             </div>
-          })}
-          <input type="submit" value="Add"></input>
-        </form>
-      </div>
-    );
   }
 }
