@@ -1,16 +1,27 @@
-import 'babel-polyfill';
-import React from 'react'
-import { render } from 'react-dom'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
-import {EditMealContainer} from './src/edit-meal-container'
-import {CreateMealContainer} from './src/create-meal-container'
-import {MealListContainer} from './src/meal-list-container'
+'use strict';
 
-render(
-  <Router history={browserHistory}>
-    <Route path="/" component={MealListContainer}/>
-    <Route path="/meals/create" component={CreateMealContainer}/>
-    <Route path="/meals/edit/:mealName" component={EditMealContainer}/>
-  </Router>,
-  document.getElementById('content')
-);
+var express = require('express');
+
+var app = express();
+
+
+// [START hello_world]
+// Say hello!
+app.get('/', function(req, res) {
+  res.status(200).send('Hello, world!');
+});
+// [END hello_world]
+
+if (module === require.main) {
+  // [START server]
+  // Start the server
+  var server = app.listen(process.env.PORT || 8080, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('App listening at http://%s:%s', host, port);
+  });
+  // [END server]
+}
+
+module.exports = app;
