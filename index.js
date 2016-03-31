@@ -1,19 +1,18 @@
 'use strict';
 
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
+app.use(express.static(__dirname + '/'));
 
-// [START hello_world]
-// Say hello!
+
 app.get('/', function(req, res) {
-  res.status(200).send('Hello, world!');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
-// [END hello_world]
 
 if (module === require.main) {
-  // [START server]
   // Start the server
   var server = app.listen(process.env.PORT || 8080, function () {
     var host = server.address().address;
@@ -21,7 +20,6 @@ if (module === require.main) {
 
     console.log('App listening at http://%s:%s', host, port);
   });
-  // [END server]
 }
 
 module.exports = app;
