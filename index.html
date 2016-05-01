@@ -8,7 +8,7 @@
     <meta http-equiv="cleartype" content="on">
     <title>Hello React!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-teal.min.css">
     <link rel="stylesheet" href="/app.css"/>
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <!-- No need for Babel! -->
@@ -33,6 +33,17 @@
       </div>
       <main class="mdl-layout__content">
         <div id="content" class="page-content"></div>
+        <div id="tabs">
+          <div class="app-bottom-tab">
+            <a href="/"><i class="material-icons">home</i></a>
+          </div>
+          <div class="app-bottom-tab">
+            <a href="/plan"><i class="material-icons">date_range</i></a>
+          </div>
+          <div class="app-bottom-tab">
+            <a href="/meals"><i class="material-icons">view_list</i></a>
+          </div>
+        </div>
       </main>
     </div>
     <script src="/bundle.js"></script>
