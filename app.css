@@ -52,6 +52,7 @@
   color: #fff;
   padding: 8px 0 10px;
   font-size: 14px;
+  z-index: 2;
 }
 
 .app-bottom-tab {
@@ -62,4 +63,72 @@
 
 .app-bottom-tab a {
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
+
+.empty-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(232, 230, 223, 0.2);
+  width: 80%;
+  border-radius: 5px;
+  height: 60%;
+}
+
+.empty-list h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.empty-plan h3 ~ span {
+  margin-top: 24px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center.center-for-tabs {
+  position: absolute;
+  top: 0;
+  bottom: 56px;
+  left: 0;
+  right: 0;
+}
+
+.plan-day-nutrient-list {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gray;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.plan-day-nutrient-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.plan-day-meals {
+  padding-top: 48px;
+}
+
+.plan-day-meals-meal .calories {
+
+}
+

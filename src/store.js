@@ -1,6 +1,12 @@
 import seed_data from '../seed-data'
 
 
+let plan = localStorage.getItem('plan');
+if (!plan) {
+  plan = {}
+} else {
+  plan = JSON.parse(plan);
+}
 let meals = localStorage.getItem('meals');
 if (!meals) {
   meals = seed_data.MEALS;
@@ -23,6 +29,7 @@ const store = {
   listeners_: [],
   newMealForm: newMealForm,
   meals: meals,
+  plan: plan,
 
   addChangeListener: function(listener) {
     this.listeners_.push({listener});
@@ -90,7 +97,34 @@ const store = {
         observer.listener(value)
       }
     });
-  }
+  },
+
+  getMealsForDay: function(dateInSeconds) {
+    return this.plan[dateInSeconds] ? this.plan[dateInSeconds] : [];
+  },
+
+  mealForDayToggled: function(meal, day) {
+    let meals = this.getMealsForDay(day).slice(0);
+    const existingMeal = meals.find(m => m.name == meal.name);
+    if (!existingMeal) {
+      meals.push(meal)
+    } else {
+      meals = meals.filter(m => m.name != meal.name)
+    }
+    this.setMealsForDay(meals, day);
+  },
+
+  setMealsForDay(meals, day) {
+    this.plan[day] = meals;
+    this.dispatchChange('updateMealsForDay', meals);
+  },
+
+  onUpdateMealsForDay: function(cb) {
+    this.listeners_.push({
+      listener: cb,
+      tag: 'updateMealsForDay'
+    });
+  },
 }
 
 exports.store = store;

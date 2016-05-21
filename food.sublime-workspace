@@ -280,109 +280,27 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "src/edit-meal.js",
 			"settings":
 			{
-				"buffer_size": 300,
-				"line_ending": "Windows",
-				"name": "README.md"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 966,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/kevin/Programs/go_appengine/goroot/README.md",
-			"settings":
-			{
-				"buffer_size": 1638,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.yaml",
-			"settings":
-			{
-				"buffer_size": 134,
-				"line_ending": "Windows",
-				"name": "app.yaml"
-			}
-		},
-		{
-			"file": "webpack.config.js",
-			"settings":
-			{
-				"buffer_size": 497,
-				"line_ending": "Windows",
-				"name": "webpack.config.js"
+				"buffer_size": 2227,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1550,
-				"line_ending": "Windows",
-				"name": "index.html"
+				"buffer_size": 2102,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "react-entry.js",
 			"settings":
 			{
-				"buffer_size": 631,
-				"line_ending": "Windows",
-				"name": "react-entry.js"
-			}
-		},
-		{
-			"file": "src/week-plan.js",
-			"settings":
-			{
-				"buffer_size": 115,
-				"line_ending": "Windows",
-				"name": "week-pan.js"
-			}
-		},
-		{
-			"file": "index.js",
-			"settings":
-			{
-				"buffer_size": 528,
-				"line_ending": "Windows",
-				"name": "index.js"
-			}
-		},
-		{
-			"file": "src/create-meal-container.js",
-			"settings":
-			{
-				"buffer_size": 563,
-				"line_ending": "Windows",
-				"name": "create-meal-container.js"
-			}
-		},
-		{
-			"file": "src/create-meal.js",
-			"settings":
-			{
-				"buffer_size": 1755,
-				"line_ending": "Windows",
-				"name": "create-meal.js"
-			}
-		},
-		{
-			"file": "src/edit-meal-container.js",
-			"settings":
-			{
-				"buffer_size": 580,
-				"line_ending": "Windows",
-				"name": "edit-meal-container.js"
+				"buffer_size": 735,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -394,10 +312,19 @@
 			}
 		},
 		{
-			"file": "seed-data.js",
+			"file": "src/home-container.js",
 			"settings":
 			{
-				"buffer_size": 922,
+				"buffer_size": 1411,
+				"line_ending": "Windows",
+				"name": "home-container.js"
+			}
+		},
+		{
+			"file": "src/store.js",
+			"settings":
+			{
+				"buffer_size": 2385,
 				"line_ending": "Windows"
 			}
 		},
@@ -405,26 +332,8 @@
 			"file": "app.css",
 			"settings":
 			{
-				"buffer_size": 494,
+				"buffer_size": 1403,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/edit-meal.js",
-			"settings":
-			{
-				"buffer_size": 1751,
-				"line_ending": "Windows",
-				"name": "edit-meal.js"
-			}
-		},
-		{
-			"file": "src/store.js",
-			"settings":
-			{
-				"buffer_size": 2132,
-				"line_ending": "Windows",
-				"name": "store.js"
 			}
 		}
 	],
@@ -495,12 +404,27 @@
 	],
 	"file_history":
 	[
-		"/C/Users/kevin/Documents/GitHub/food/src/meal.js",
+		"/C/Users/kevin/Documents/GitHub/food/seed-data.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/meal-list-container.js",
+		"/C/Users/kevin/Documents/GitHub/food/src/edit-meal-container.js",
+		"/C/Users/kevin/Documents/GitHub/food/src/create-meal.js",
+		"/C/Users/kevin/Documents/GitHub/food/src/create-meal-container.js",
+		"/C/Users/kevin/Documents/GitHub/food/index.js",
+		"/C/Users/kevin/Documents/GitHub/food/src/week-plan.js",
+		"/C/Users/kevin/Documents/GitHub/food/react-entry.js",
+		"/C/Users/kevin/Documents/GitHub/food/index.html",
+		"/C/Users/kevin/Documents/GitHub/food/webpack.config.js",
+		"/C/Users/kevin/Documents/GitHub/food/app.yaml",
+		"/C/Users/kevin/Documents/GitHub/food/README.md",
+		"/C/Users/kevin/Documents/GitHub/food/package.json",
+		"/C/Users/kevin/Documents/GitHub/food/app.css",
+		"/C/Users/kevin/Documents/GitHub/food/src/edit-meal.js",
+		"/C/Users/kevin/Documents/GitHub/food/src/store.js",
+		"/C/Users/kevin/Programs/go_appengine/goroot/README.md",
+		"/C/Users/kevin/Documents/GitHub/food/src/meal.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/app.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/edit-week-plan.js",
 		"/C/Users/kevin/Documents/GitHub/food/.gitignore",
-		"/C/Users/kevin/Documents/GitHub/food/app.css",
 		"/C/Users/kevin/Documents/GitHub/food/src/seed-data.js",
 		"/C/Users/kevin/Documents/GitHub/food/.babelrc",
 		"/C/Users/kevin/Documents/GitHub/food/src/index.js",
@@ -607,22 +531,7 @@
 		"/C/Users/kevin/Documents/GitHub/recipe_crawler/fetcher.py",
 		"/C/Users/kevin/Documents/GitHub/recipe_crawler/crawler.py",
 		"/C/Users/kevin/Downloads/sfpd_incident_all_csv/sfpd_incident_2014.csv",
-		"/C/Users/kevin/Documents/GitHub/recipe_crawler/AllRecipesExtractor.py",
-		"/C/Users/kevin/Documents/GitHub/recipe_crawler/recipe.py",
-		"/C/Users/kevin/Programs/generators.js.js",
-		"/C/Users/kevin/Programs/test.js",
-		"/C/Users/kevin/Documents/GitHub/material/config/build.config.js",
-		"/C/Users/kevin/Documents/GitHub/material/gulpfile.js",
-		"/C/Users/kevin/Pictures/trunk-club-1/DSC00604.JPG",
-		"/C/Program Files (x86)/NCSOFT/WildStar/Wildstar.exe",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/lib/src/index.js",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/test/src.js",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/.editorconfig",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/vinyl-fs/LICENSE",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp-util/node_modules/vinyl/lib/isNull.js",
-		"/C/Users/kevin/Documents/GitHub/material/docs/app/template/view-source.tmpl.html",
-		"/C/Users/kevin/Documents/GitHub/material/bower_components/jquery/src/attributes/val.js",
-		"/C/Users/kevin/Documents/GitHub/material/node_modules/gulp/node_modules/liftoff/lib/build_config_name_regex.js"
+		"/C/Users/kevin/Documents/GitHub/recipe_crawler/AllRecipesExtractor.py"
 	],
 	"find":
 	{
@@ -773,145 +682,116 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
+					"file": "src/edit-meal.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 300,
+						"buffer_size": 2227,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								299,
-								299
+								1766,
+								1766
 							]
 						],
 						"settings":
 						{
-							"auto_name": "README.md",
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 966,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								727,
-								727
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/kevin/Programs/go_appengine/goroot/README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1638,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 134,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								134,
-								134
-							]
-						],
-						"settings":
-						{
-							"auto_name": "app.yaml",
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "webpack.config.js",
+					"buffer": 1,
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 497,
+						"buffer_size": 2102,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
+								1950,
+								1950
 							]
 						],
 						"settings":
 						{
-							"auto_name": "webpack.config.js",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "react-entry.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								609,
+								609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/meal-list-container.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -924,26 +804,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "index.html",
+					"buffer": 4,
+					"file": "src/home-container.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1550,
+						"buffer_size": 1411,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								662,
-								662
+								1206,
+								1206
 							]
 						],
 						"settings":
 						{
-							"auto_name": "index.html",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"auto_name": "home-container.js",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -956,261 +864,19 @@
 				},
 				{
 					"buffer": 6,
-					"file": "react-entry.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 631,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								631,
-								631
-							]
-						],
-						"settings":
-						{
-							"auto_name": "react-entry.js",
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/week-plan.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								115,
-								115
-							]
-						],
-						"settings":
-						{
-							"auto_name": "week-pan.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"auto_name": "index.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/create-meal-container.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								44,
-								44
-							]
-						],
-						"settings":
-						{
-							"auto_name": "create-meal-container.js",
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/create-meal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1755,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								368,
-								368
-							]
-						],
-						"settings":
-						{
-							"auto_name": "create-meal.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/edit-meal-container.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 580,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								580
-							]
-						],
-						"settings":
-						{
-							"auto_name": "edit-meal-container.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/meal-list-container.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1617,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1617,
-								1617
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "seed-data.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 922,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								899,
-								899
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 14,
 					"file": "app.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 494,
+						"buffer_size": 1403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								199,
-								199
+								1150,
+								1150
 							]
 						],
 						"settings":
@@ -1220,70 +886,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "src/edit-meal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"auto_name": "edit-meal.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "src/store.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								941,
-								941
-							]
-						],
-						"settings":
-						{
-							"auto_name": "store.js",
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1306,18 +912,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.760794392523,
 			1.0
 		],
 		"rows":
@@ -1358,14 +957,14 @@
 		[
 			[
 				"",
-				"src\\edit-meal.js"
-			],
-			[
-				"store.js",
-				"src\\store.js"
+				"app.css"
 			],
 			[
 				"store",
+				"src\\store.js"
+			],
+			[
+				"store.js",
 				"src\\store.js"
 			],
 			[
