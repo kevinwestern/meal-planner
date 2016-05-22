@@ -11,9 +11,7 @@ export class PlanContainer extends Component {
   }
 
   componentWillMount() {
-    this.setState({
-      selectedMeals: this.getMealsForDay(this.day)
-    });
+    this.updateState_();
     store.onUpdateMealsForDay(this.updateState_.bind(this))
   }
 
@@ -25,9 +23,24 @@ export class PlanContainer extends Component {
   }
 
   updateState_() {
+    const selectedMeals = store.getMealsForDay(this.day);
+    const nutrientTotals = {
+      fat: 0,
+      carbs: 0,
+      protein: 0,
+      calories: 0
+    };
+    selectedMeals.forEach(meal => {
+      nutrientTotals.fat += meal.nutrients.fat;
+      nutrientTotals.carbs += meal.nutrients.carbs;
+      nutrientTotals.protein += meal.nutrients.protein;
+      nutrientTotals.calories += meal.nutrients.calories;
+    })
     this.setState({
-      selectedMeals: this.getMealsForDay(this.day)
+      selectedMeals: this.getMealsForDay(this.day),
+      nutrientTotals
     });
+    console.log(nutrientTotals)
   }
 
   render() {
@@ -85,6 +98,27 @@ export class DayView extends Component {
               </div>
             </li>
           }, this)}
+        </ul>
+      </div>
+    )
+  }
+}
+
+export class NutrientTotals extends Component {
+  constructor(props, context) {
+    super(props, context);
+  }
+
+  render() {
+    return (
+      <div className="nutrient-list-totals">
+        <ul className="nutrient-list-totals-list">
+          {this.props.nutrients.map(nutrient => {
+            <li key={nutrient.name} className="nutrient-list-totals-list-item">
+              <div>{nutrient.name}</div>
+              <div>{nutrient.value}</div>
+            </li>
+          })}
         </ul>
       </div>
     )

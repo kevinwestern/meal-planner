@@ -70,7 +70,7 @@ const store = {
     if (field == 'name') {
       newForm.name = value;
     } else {
-      newForm.nutrients[field] = value;
+      newForm.nutrients[field] = Number(value);
     }
     this.dispatchChange('updateEditMealForm',
       new MealRecord(JS_MEAL_TO_RECORD(newForm)));
