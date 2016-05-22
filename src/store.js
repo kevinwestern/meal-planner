@@ -1,85 +1,72 @@
 import seed_data from '../seed-data'
+import {Map, List, Record} from 'immutable';
 
-
-let plan = localStorage.getItem('plan');
-if (!plan) {
-  plan = {}
-} else {
-  plan = JSON.parse(plan);
-}
-let meals = localStorage.getItem('meals');
-if (!meals) {
-  meals = seed_data.MEALS;
-} else {
-  meals = JSON.parse(meals);
-}
-
-// let store = createStore(foodApp, foods);
-let newMealForm = {
+const MealRecord = Record({
   name: '',
-  nutrients: {
-    calories: '',
-    carbs: '',
-    fat: '',
-    protein: ''
-  }
+  nutrients: {}
+});
+
+const NutrientRecord = Record({
+  calories: 0,
+  carbs: 0,
+  fat: 0,
+  protein: 0
+});
+
+const JS_MEAL_TO_RECORD = jsMeal => {
+  return new MealRecord({
+    name: jsMeal.name,
+    nutrients: new NutrientRecord(jsMeal.nutrients || {})
+  })
 };
+
+const planFromStorage = localStorage.getItem('plan');
+let plan = new Map();
+if (!!planFromStorage) {
+  plan = new Map(JSON.parse(plan));
+}
+
+const mealsFromStorage = localStorage.getItem('meals');
+let meals = new List(seed_data.MEALS.map(JS_MEAL_TO_RECORD));
+if (mealsFromStorage) {
+  meals = new List(JSON.parse(mealsFromStorage).map(JS_MEAL_TO_RECORD));
+}
 
 const store = {
   listeners_: [],
-  newMealForm: newMealForm,
-  meals: meals,
-  plan: plan,
 
   addChangeListener: function(listener) {
     this.listeners_.push({listener});
   },
 
-  getNewMealForm: function() {
-    return this.newMealForm;
-  },
+  getMeals: () => meals,
 
-  getMeals: function() {
-    return this.meals;
-  },
+  getEditMealForm: mealName => meals.find(meal => meal.name == mealName),
 
-  getEditMealForm: function(mealName) {
-    const meal = this.getMeals().find(meal => meal.name == mealName);
-    return Object.assign({}, meal);
-  },
-
-  getNewMealForm: function() {
-    return Object.assign({}, this.newMealForm);
-  },
+  getNewMealForm: () => JS_MEAL_TO_RECORD({name: ''}),
 
   saveCreateMealForm: function(form) {
-    var meals = this.meals.slice();
-    meals.push(form);
-    localStorage.setItem('meals', JSON.stringify(meals));
-    this.newMealForm = newMealForm;
-    this.meals = meals;
+    meals = meals.push(form);
+    localStorage.setItem('meals', JSON.stringify(meals.toJS()));
     this.dispatchChange();
   },
 
   saveEditMealForm: function(form) {
-    var updatedMeal = this.getMeals().find(meal => form.name == meal.name);
-    var meals = this.meals.map(meal => {
-      return meal.name == form.name ?
-        Object.assign({}, meal, form) : meal;
-    });
-    this.meals = meals;
-    localStorage.setItem('meals', JSON.stringify(this.meals));
+    const index = meals.findIndex(meal => form.name == meal.name)
+    meals = meals.update(index, meal => form)
+    localStorage.setItem('meals', JSON.stringify(meals.toJS()));
     this.dispatchChange();
   },
 
   updateEditMealForm: function(form, field, value) {
-    var newForm = Object.assign({}, form);
+    var newForm = form.toJS();
     if (field == 'name') {
-      newForm[field] = value;
+      newForm.name = value;
     } else {
       newForm.nutrients[field] = value;
     }
-    this.dispatchChange('updateEditMealForm', newForm);
+    this.dispatchChange('updateEditMealForm',
+      new MealRecord(JS_MEAL_TO_RECORD(newForm)));
   },
 
   onUpdateEditMealForm: function(cb) {
@@ -99,26 +86,20 @@ const store = {
     });
   },
 
-  getMealsForDay: function(dateInSeconds) {
-    return this.plan[dateInSeconds] ? this.plan[dateInSeconds] : [];
-  },
+  getMealsForDay: dateInSeconds => plan.get(dateInSeconds) || new List(),
 
   mealForDayToggled: function(meal, day) {
-    let meals = this.getMealsForDay(day).slice(0);
-    const existingMeal = meals.find(m => m.name == meal.name);
-    if (!existingMeal) {
-      meals.push(meal)
+    let mealsForDay = this.getMealsForDay(day);
+    const existingIndex = mealsForDay.findIndex(m => m.name == meal.name);
+    if (existingIndex == -1) {
+      mealsForDay = mealsForDay.push(meal)
     } else {
-      meals = meals.filter(m => m.name != meal.name)
+      mealsForDay = mealsForDay.delete(existingIndex)
     }
-    this.setMealsForDay(meals, day);
+    plan = plan.set(day, mealsForDay);
+    this.dispatchChange('updateMealsForDay');
   },
-
-  setMealsForDay(meals, day) {
-    this.plan[day] = meals;
-    this.dispatchChange('updateMealsForDay', meals);
-  },
-
+  
   onUpdateMealsForDay: function(cb) {
     this.listeners_.push({
       listener: cb,
