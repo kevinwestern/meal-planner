@@ -20,10 +20,17 @@ const JS_MEAL_TO_RECORD = jsMeal => {
   })
 };
 
+const JS_PLAN_TO_REOCRD = jsPlan => {
+  return Object.keys(jsPlan).reduce((obj, dateSeconds) => {
+    obj[dateSeconds] = new List(jsPlan[dateSeconds].map(JS_MEAL_TO_RECORD));
+    return obj;
+  }, {});
+}
+
 const planFromStorage = localStorage.getItem('plan');
 let plan = new Map();
 if (!!planFromStorage) {
-  plan = new Map(JSON.parse(plan));
+  plan = new Map(JS_PLAN_TO_REOCRD(JSON.parse(planFromStorage)));
 }
 
 const mealsFromStorage = localStorage.getItem('meals');
@@ -97,7 +104,12 @@ const store = {
       mealsForDay = mealsForDay.delete(existingIndex)
     }
     plan = plan.set(day, mealsForDay);
+    this.savePlan(plan)
     this.dispatchChange('updateMealsForDay');
+  },
+
+  savePlan: function(plan) {
+    localStorage.setItem('plan', JSON.stringify(plan.toJS()));
   },
   
   onUpdateMealsForDay: function(cb) {
