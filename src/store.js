@@ -93,7 +93,7 @@ const store = {
     });
   },
 
-  getMealsForDay: dateInSeconds => plan.get(dateInSeconds) || new List(),
+  getMealsForDay: dateInSeconds => plan.get(dateInSeconds + "") || new List(),
 
   mealForDayToggled: function(meal, day) {
     let mealsForDay = this.getMealsForDay(day);

@@ -22,8 +22,9 @@ export class Home extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      displayComponent: this.props.meals.length ?
-        <PlannedMeals /> : <EmptyPlan day={this.props.day} />
+      displayComponent: this.props.meals.size ?
+        <PlannedMeals day={this.today}
+                      meals={this.props.meals}/> : <EmptyPlan day={this.props.day} />
     }
   }
 
