@@ -102,7 +102,7 @@
   right: 0;
 }
 
-.plan-day-nutrient-list {
+.plan-day-view .nutrient-list-totals-list {
   height: 48px;
   display: flex;
   align-items: center;
@@ -115,9 +115,10 @@
   margin: 0;
   padding: 0;
   z-index: 2;
+  list-style-type: none;
 }
 
-.plan-day-nutrient-list-item {
+.plan-day-view .nutrient-list-totals-list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;

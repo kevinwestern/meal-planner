@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"nut",
+				"nutrient"
+			],
+			[
+				"nutrient",
+				"nutrientTotals"
+			],
+			[
+				"nutrien",
+				"nutrientTotals"
+			],
+			[
+				"getM",
+				"getMealsForDay"
+			],
+			[
+				"mea",
+				"mealsFromStorage"
+			],
+			[
+				"JS",
+				"JS_MEAL_TO_RECORD"
+			],
+			[
+				"space",
+				"space-between"
+			],
+			[
+				"today",
+				"todayWithoutTime"
+			],
+			[
 				"update",
 				"updatedForm"
 			],
@@ -299,15 +331,7 @@
 			"file": "react-entry.js",
 			"settings":
 			{
-				"buffer_size": 735,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/meal-list-container.js",
-			"settings":
-			{
-				"buffer_size": 1617,
+				"buffer_size": 853,
 				"line_ending": "Windows"
 			}
 		},
@@ -315,16 +339,51 @@
 			"file": "src/home-container.js",
 			"settings":
 			{
-				"buffer_size": 1411,
+				"buffer_size": 1455,
 				"line_ending": "Windows",
 				"name": "home-container.js"
+			}
+		},
+		{
+			"file": "src/plan-container.js",
+			"settings":
+			{
+				"buffer_size": 3497,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/utils.js",
+			"settings":
+			{
+				"buffer_size": 183,
+				"line_ending": "Windows",
+				"name": "utils.js"
 			}
 		},
 		{
 			"file": "src/store.js",
 			"settings":
 			{
-				"buffer_size": 2385,
+				"buffer_size": 3109,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 10 files for \"updateMealsForDay\"\n\nC:\\Users\\kevin\\Documents\\GitHub\\food\\src\\plan-container.js:\n   15        selectedMeals: this.getMealsForDay(this.day)\n   16      });\n   17:     store.onUpdateMealsForDay(this.updateState_.bind(this))\n   18    }\n   19  \n\nC:\\Users\\kevin\\Documents\\GitHub\\food\\src\\store.js:\n   99      plan = plan.set(day, mealsForDay);\n  100      this.setMealsForDay(meals, day);\n  101:     this.dispatchChange('updateMealsForDay', meals);\n  102    },\n  103    \n  104:   onUpdateMealsForDay: function(cb) {\n  105      this.listeners_.push({\n  106        listener: cb,\n  107:       tag: 'updateMealsForDay'\n  108      });\n  109    },\n\n4 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 684,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/edit-meal-container.js",
+			"settings":
+			{
+				"buffer_size": 580,
 				"line_ending": "Windows"
 			}
 		},
@@ -332,7 +391,7 @@
 			"file": "app.css",
 			"settings":
 			{
-				"buffer_size": 1403,
+				"buffer_size": 1934,
 				"line_ending": "Windows"
 			}
 		}
@@ -405,6 +464,7 @@
 	"file_history":
 	[
 		"/C/Users/kevin/Documents/GitHub/food/seed-data.js",
+		"/C/Users/kevin/Documents/GitHub/food/package.json",
 		"/C/Users/kevin/Documents/GitHub/food/src/meal-list-container.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/edit-meal-container.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/create-meal.js",
@@ -416,7 +476,6 @@
 		"/C/Users/kevin/Documents/GitHub/food/webpack.config.js",
 		"/C/Users/kevin/Documents/GitHub/food/app.yaml",
 		"/C/Users/kevin/Documents/GitHub/food/README.md",
-		"/C/Users/kevin/Documents/GitHub/food/package.json",
 		"/C/Users/kevin/Documents/GitHub/food/app.css",
 		"/C/Users/kevin/Documents/GitHub/food/src/edit-meal.js",
 		"/C/Users/kevin/Documents/GitHub/food/src/store.js",
@@ -542,6 +601,7 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"C:\\Users\\kevin\\Documents\\GitHub\\food\\src",
 			"",
 			"angular2/",
 			"angular2/ts",
@@ -557,6 +617,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"fat\":\"\"}",
+			":\"\",",
+			".fat",
+			"updateMealsForDay",
+			"setMealsForDay",
+			"onUpdateEditMealForm",
+			"512",
+			".mealName",
 			"formToJson_",
 			"class=",
 			"onChange_",
@@ -669,6 +737,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"fat\":0}",
+			":0,",
 			"className=",
 			"htmlFor=",
 			"className="
@@ -682,7 +752,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -709,10 +779,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 253.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -728,8 +798,8 @@
 						"selection":
 						[
 							[
-								1950,
-								1950
+								304,
+								304
 							]
 						],
 						"settings":
@@ -739,10 +809,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 144.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -751,15 +821,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 735,
+						"buffer_size": 853,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								609
+								760,
+								760
 							]
 						],
 						"settings":
@@ -770,24 +840,201 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "src/meal-list-container.js",
-					"semi_transient": true,
+					"file": "src/home-container.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1617,
+						"buffer_size": 1455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								101,
-								101
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"auto_name": "home-container.js",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/plan-container.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2253,
+								2254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 8.0,
+						"translation.y": 1656.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								181,
+								181
+							]
+						],
+						"settings":
+						{
+							"auto_name": "utils.js",
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										196,
+										213
+									],
+									[
+										437,
+										454
+									],
+									[
+										498,
+										515
+									],
+									[
+										612,
+										629
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								207,
+								207
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/edit-meal-container.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
 							]
 						],
 						"settings":
@@ -804,79 +1051,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/home-container.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1411,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1206,
-								1206
-							]
-						],
-						"settings":
-						{
-							"auto_name": "home-container.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 792.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/store.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								490,
-								490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "app.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1403,
+						"buffer_size": 1934,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1150,
-								1150
+								1610,
+								1610
 							]
 						],
 						"settings":
@@ -886,10 +1074,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 2041.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -960,8 +1148,16 @@
 				"app.css"
 			],
 			[
+				"app.css",
+				"app.css"
+			],
+			[
 				"store",
 				"src\\store.js"
+			],
+			[
+				"utils",
+				"src\\utils.js"
 			],
 			[
 				"store.js",

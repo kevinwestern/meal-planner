@@ -35,18 +35,23 @@ export class PlanContainer extends Component {
       nutrientTotals.carbs += meal.nutrients.carbs;
       nutrientTotals.protein += meal.nutrients.protein;
       nutrientTotals.calories += meal.nutrients.calories;
-    })
+    });
     this.setState({
       selectedMeals: this.getMealsForDay(this.day),
-      nutrientTotals
+      nutrientTotals: Object.keys(nutrientTotals).map(nutrient => {
+        return {
+          name: nutrient,
+          value: nutrientTotals[nutrient]
+        };
+      })
     });
-    console.log(nutrientTotals)
   }
 
   render() {
     return (
       <DayView day={this.day}
                meals={store.getMeals()}
+               nutrientTotals={this.state.nutrientTotals}
                selectedMeals={this.state.selectedMeals}></DayView>
     )
   }
@@ -69,19 +74,8 @@ export class DayView extends Component {
   render() {
     return (
       <div>
-        <div className="plan-day-nutrient-list">
-          <div className="plan-day-nutrient-list-item">
-            <div>Calories</div><div>512</div>
-          </div>
-          <div className="plan-day-nutrient-list-item">
-            <div>Calories</div><div>512</div>
-          </div>
-          <div className="plan-day-nutrient-list-item">
-            <div>Calories</div><div>512</div>
-          </div>
-          <div className="plan-day-nutrient-list-item">
-            <div>Calories</div><div>11512</div>
-          </div>
+        <div className="plan-day-view">
+          <NutrientTotals nutrients={this.props.nutrientTotals}></NutrientTotals>
         </div>
         <ul className="plan-day-meals mdl-list">
           {this.props.meals.map(meal => {
@@ -114,7 +108,7 @@ export class NutrientTotals extends Component {
       <div className="nutrient-list-totals">
         <ul className="nutrient-list-totals-list">
           {this.props.nutrients.map(nutrient => {
-            <li key={nutrient.name} className="nutrient-list-totals-list-item">
+            return <li key={nutrient.name} className="nutrient-list-totals-list-item">
               <div>{nutrient.name}</div>
               <div>{nutrient.value}</div>
             </li>
